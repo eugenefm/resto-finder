@@ -2,13 +2,13 @@ import 'react-app-polyfill/ie11';
 import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.scss';
-import Home from './Routes/Home';
-import Results from './Routes/Results';
 import store from './state/store';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import './styles/index.scss';
+import Home from './routes/Home';
+import Results from './routes/Results';
 
 ReactDOM.render(
   <React.StrictMode>

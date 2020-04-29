@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchResults from '../components/SearchResults';
 import { useSelector } from 'react-redux';
 import { selectRestaurants } from '../state/slice';
+import SearchResults from '../components/SearchResults';
 
 const Results = () => {
   const restaurants = useSelector(selectRestaurants);
