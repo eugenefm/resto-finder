@@ -7,8 +7,8 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import './styles/index.scss';
-import Home from './routes/Home';
-import Results from './routes/Results';
+import Home from './components/Home';
+import Results from './components/Results';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRestaurants, selectError } from '../state/slice';
-import SearchBar from '../components/SearchBar';
+import SearchBar from './SearchBar';
 
 const Home = ({ history }) => {
   const dispatch = useDispatch();
