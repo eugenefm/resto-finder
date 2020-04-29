@@ -1,4 +1,4 @@
-export const OPEN_TABLE_ROOT = 'http://opentable.herokuapp.com/api';
+export const OPEN_TABLE_ROOT = 'https://opentable.herokuapp.com/api';
 
 export const PRICES = [
   'inexpensive',
