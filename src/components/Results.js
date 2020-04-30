@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectRestaurants, selectCity } from '../state/slice';
 import SearchResults from './SearchResults';
+import Header from './Header';
 
 const Results = () => {
   const restaurants = useSelector(selectRestaurants);
@@ -10,12 +11,7 @@ const Results = () => {
   return (
     <>
       {!city && <Redirect to='/' />}
-      <header className='results-header'>
-        <div className='wrapper top-bar'>
-          <h1>RestoFinder</h1>
-          <Link to='/'>Back to Home</Link>
-        </div>
-      </header>
+      <Header />
       <main>
         <SearchResults restaurants={restaurants} city={city} />
       </main>
