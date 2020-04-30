@@ -24,9 +24,9 @@ When doing some basic performance testing, I've worked with the waterfall in the
 
 ### 4. How would you improve the API that you just used?
 
-The images provided by the API are currently broken. I included a thumbnail image in my restaurant cards to demonstrate how they would be implemented. But ideally I would fix that. T
+The images provided by the API are currently broken. I included a thumbnail image in my restaurant cards to demonstrate how they would be implemented. But ideally I would fix that.
 
-he API only returns paginated data, and for an application like this where we're doing further filtering on the frontend it would be ideal to access all available records for a specific city.
+The API only returns paginated data, and for an application like this where we're doing further filtering on the frontend it would be ideal to access all available records for a specific city.
 
 ### 5. Please describe yourself using JSON.
 
