@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import './styles/index.scss';
 import Home from './components/Home';
 import Results from './components/Results';
+import Footer from './components/Footer';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route exact path='/' component={Home} />
         <Route path='/results' component={Results} />
       </Router>
+      <Footer />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

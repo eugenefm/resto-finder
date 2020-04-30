@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import RestaurantCard from './RestaurantCard';
 import { useDispatch } from 'react-redux';
 import { setFilter } from '../state/slice';
 import SearchBar from './SearchBar';
 
-const SearchResults = ({ restaurants }) => {
+const SearchResults = ({ restaurants, city }) => {
   const dispatch = useDispatch();
 
   return (
@@ -17,9 +18,9 @@ const SearchResults = ({ restaurants }) => {
             onSubmit={(value) => dispatch(setFilter(value))}
             ctaText='Filter'
             ariaLabel='Refine the list of available restaurants by entering a name, address or area.'
-            placeholder='Refine the list of available restaurants.'
+            placeholder='Name, address or area'
           />
-          <h2 aria-live='polite'>{`${restaurants.length} Available Restaurants`}</h2>
+          <h2 aria-live='polite'>{`${restaurants.length} restaurants in ${city}`}</h2>
         </div>
       </div>
 
@@ -40,6 +41,11 @@ const SearchResults = ({ restaurants }) => {
       </div>
     </div>
   );
+};
+
+SearchResults.protoTypes = {
+  city: PropTypes.string,
+  restaurants: PropTypes.array,
 };
 
 export default SearchResults;

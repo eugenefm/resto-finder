@@ -16,7 +16,7 @@ const RestaurantCard = ({ imgSrc, name, address, price = 1, reserveUrl }) => {
         </p>
       </div>
       <a href={reserveUrl} aria-label={`Reserve a table at ${name}.`}>
-        Reserve
+        Reserve a Table
       </a>
     </div>
   );

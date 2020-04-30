@@ -40,10 +40,10 @@ export const {
 
 export const fetchRestaurants = (city, history) => async (dispatch) => {
   try {
+    dispatch(setCity(''));
     dispatch(setFilter(''));
     dispatch(setError(''));
     dispatch(setFetching(true));
-    dispatch(setCity(city));
 
     const res = await axios.get(OPEN_TABLE_ROOT + '/restaurants', {
       params: {
@@ -55,6 +55,7 @@ export const fetchRestaurants = (city, history) => async (dispatch) => {
     dispatch(setFetching(false));
     if (restaurants && restaurants.length > 0) {
       dispatch(setRestaurants(restaurants));
+      dispatch(setCity(city));
       return history.push('/results');
     }
     return dispatch(setError(`No results found for "${city}".`));
@@ -77,5 +78,7 @@ export const selectRestaurants = (state) => {
 };
 
 export const selectError = (state) => state.restaurantSearch.error;
+
+export const selectCity = (state) => state.restaurantSearch.city;
 
 export default restaurantSlice.reducer;

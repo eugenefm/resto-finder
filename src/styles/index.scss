@@ -5,6 +5,7 @@ $darkText: #000a2d;
 $lightText: #4f545c;
 $lightShade: #d0dcf2;
 $backgroundShade: #f5f5ff;
+$error: #a20101;
 $white: #fff;
 
 body {
@@ -12,8 +13,28 @@ body {
   color: $darkText;
 }
 
+main {
+  padding-top: 58px;
+}
+
+footer {
+  background-color: $darkText;
+  padding: 10px;
+  min-height: 40px;
+
+  p {
+    color: $white;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}
+
 .results-header {
   background: $white;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
 
@@ -108,7 +129,7 @@ input {
 }
 
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - 40px);
   padding: 40px 10px 10px;
 
   .card {
@@ -117,6 +138,10 @@ input {
     margin: 0 auto;
     padding: 20px;
   }
+}
+
+.error {
+  color: $error;
 }
 
 .top-bar {
@@ -175,4 +200,19 @@ input {
 
 .disabled {
   color: $lightShade;
+}
+
+@media (max-width: 500px) {
+  form,
+  button,
+  input {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+
+  .filter-content {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
 }
